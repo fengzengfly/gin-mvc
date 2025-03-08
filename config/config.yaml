@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+database:
+  host: localhost
+  port: 3306
+  username: root
+  password: password
+  database: mydb
+
+jwt:
+  secret: your_secret_key
+  expire: 7200
