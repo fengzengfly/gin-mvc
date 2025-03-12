@@ -1,10 +1,10 @@
-# Best Stock - Gin MVC Framework
+# GIN-MVC - Gin MVC Framework
 
 A Go web application built using the Gin framework with an MVC architecture inspired by Java Spring MVC patterns.
 
 ## 项目概述
 
-Best Stock 项目采用类似 Spring MVC 的分层架构设计，使用 Go 语言和 Gin 框架实现。项目结构清晰，实现了控制层、服务层和数据访问层的分离，并使用依赖注入的方式组织各组件间的关系。
+GIN-MVC 项目采用类似 Spring MVC 的分层架构设计，使用 Go 语言和 Gin 框架实现。项目结构清晰，实现了控制层、服务层和数据访问层的分离，并使用依赖注入的方式组织各组件间的关系。
 
 ## 核心特性
 
@@ -17,7 +17,7 @@ Best Stock 项目采用类似 Spring MVC 的分层架构设计，使用 Go 语�
 ## 项目结构
 
 ```
-best_stock/
+/
 ├── cmd/
 │   └── main.go              # 应用程序入口
 ├── internal/
@@ -55,7 +55,7 @@ best_stock/
 
 ```bash
 # 克隆项目
-git clone https://github.com/yourusername/best_stock.git
+git clone https://github.com/fengzengfly/gin-mvc.git
 
 # 安装依赖
 go mod tidy
