@@ -2,12 +2,20 @@ server:
   port: 8080
 
 database:
-  host: localhost
-  port: 3306
+  host: 121.37.252.232  
+  port: 18899
   username: root
-  password: password
-  database: mydb
+  password: Asd281155.
+  database: stock
 
 jwt:
-  secret: your_secret_key
+  secret: asd123yui987naslkh-0=12./
   expire: 7200
+
+log:
+  level: info
+  format: json
+  output_paths: ./logs/app.log,stdout
+  max_size: 100
+  max_backups: 3
+  max_age: 30

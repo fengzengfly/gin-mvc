@@ -16,7 +16,7 @@ type JWTClaims struct {
 }
 
 var (
-	SecretKey = []byte("your_secret_key")
+	SecretKey = []byte("asdqwetyu4568xcxcv")
 )
 
 // GenerateToken 生成 JWT Token
@@ -27,7 +27,7 @@ func GenerateToken(userID uint, username string) (string, error) {
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(time.Hour * 24).Unix(), // 24小时过期
 			IssuedAt:  time.Now().Unix(),
-			Issuer:    "your_app",
+			Issuer:    "gin-mvc",
 		},
 	}
 

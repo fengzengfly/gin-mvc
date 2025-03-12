@@ -1,8 +1,8 @@
 package service
 
 import (
-	"best_stock/internal/model"
-	"best_stock/internal/repository"
+	"gin-mvc/internal/model"
+	"gin-mvc/internal/repository"
 )
 
 type UserService struct {
@@ -25,5 +25,9 @@ func (s *UserService) Login(username, password string) (*model.User, error) {
 		return nil, err
 	}
 	// 密码验证
+	if user.Password != password {
+		return nil, nil
+	}
+
 	return user, nil
 }

@@ -1,10 +1,11 @@
 package database
 
 import (
-	"best_stock/pkg/config"
 	"fmt"
+	"gin-mvc/pkg/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"gorm.io/gorm/schema"
 )
 
 func InitDatabase(cfg *config.DatabaseConfig) (*gorm.DB, error) {
@@ -16,7 +17,10 @@ func InitDatabase(cfg *config.DatabaseConfig) (*gorm.DB, error) {
 		cfg.Database,
 	)
 
-	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
+		NamingStrategy: schema.NamingStrategy{
+			SingularTable: true, // 使用单数表名
+		}})
 	if err != nil {
 		return nil, err
 	}

@@ -8,6 +8,7 @@ type Config struct {
 	Server   ServerConfig
 	Database DatabaseConfig
 	JWT      JWTConfig
+	Log      LogConfig
 }
 
 type ServerConfig struct {
@@ -25,6 +26,15 @@ type DatabaseConfig struct {
 type JWTConfig struct {
 	Secret string
 	Expire int
+}
+
+type LogConfig struct {
+	Level       string
+	Format      string
+	OutputPaths []string `mapstructure:"output_paths"`
+	MaxSize     int
+	MaxBackups  int
+	MaxAge      int
 }
 
 func LoadConfig() (*Config, error) {

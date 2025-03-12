@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"best_stock/internal/model"
+	"gin-mvc/internal/model"
 	"gorm.io/gorm"
 )
 
